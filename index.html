@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Lanchonete SENAI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="img/xtudo.png" type="image/png" />
+</head>
+
+<body>
+    <header>
+       <div class="redes">
+        <a aria-label="GitHub" href="https://github.com/diegore0" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+        </a>
+
+        <a aria-label="Wiki Pokebola" href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9_Ball" target="_blank" rel="noopener noreferrer">
+        <img src="img/pokemart.png" alt="pokemart">
+        </a>
+		
+		<a aria-label="Wiki Pocao" href="https://bulbapedia.bulbagarden.net/wiki/Potion" target="_blank" rel="noopener noreferrer">
+        <img src="img/potionmart.png" alt="pocao">
+        </a>
+		
+		
+        </div>
+		
+        <h1>PokéMart SENAI</h1>
+    </header>
+    <main>
+        <div class="layout">
+            <section class="produtos">
+                <h2>Pokébolas</h2>
+                <div class="cardapio">
+                    
+                    <div class="produto">
+                        <img alt="PokeBall" src="img/pokeball.png" />
+                        <h3>PokeBall</h3>
+                        <p>₽ 200,00</p>
+                        <label for="pokeball">Quantidade:</label>
+                        <input id="pokeball" min="0" step="1" type="number" value="0" />
+                    </div>
+
+                    <div class="produto">
+                        <img alt="GreatBall" src="img/greatball.png" />
+                        <h3>GreatBall</h3>
+                        <p>₽ 600,00</p>
+                        <label for="greatball">Quantidade:</label>
+                        <input id="greatball" min="0" step="1" type="number" value="0" />
+                    </div>
+
+                    <div class="produto">
+                        <img alt="UltraBall" src="img/ultraball.png" />
+                        <h3>UltraBall</h3>
+                        <p>₽ 1.200,00</p>
+                        <label for="ultraball">Quantidade:</label>
+                        <input id="ultraball" min="0" step="1" type="number" value="0" />
+                    </div>
+                    
+                    <div class="produto">
+                        <img alt="MasterBall" src="img/masterball.png" />
+                        <h3>MasterBall</h3>
+                        <p>₽ 100.000,00</p>
+                        <label for="masterball">Quantidade:</label>
+                        <input id="masterball" min="0" step="1" type="number" value="0" />
+                    </div>
+                </div>
+                <h2>Medicinas</h2>
+                <div class="cardapio">
+                    <div class="produto">
+                        <img alt="Potion" src="img/potion.png" />
+                        <h3>Potion</h3>
+                        <p>₽ 300,00</p>
+                        <label for="potion">Quantidade:</label>
+                        <input id="potion" min="0" step="1" type="number" value="0" />
+                    </div>
+                    <div class="produto">
+                        <img alt="SuperPotion" src="img/superpotion.png" />
+                        <h3>Super Potion</h3>
+                        <p>₽ 700,00</p>
+                        <label for="superpotion">Quantidade:</label>
+                        <input id="superpotion" min="0" step="1" type="number" value="0" />
+                    </div>
+                    <div class="produto">
+                        <img alt="HyperPotion" src="img/hyperpotion.png" />
+                        <h3>Hyper Potion</h3>
+                        <p>₽ 1.200,00</p>
+                        <label for="hyperpotion">Quantidade:</label>
+                        <input id="hyperpotion" min="0" step="1" type="number" value="0" />
+                    </div>
+					
+					 <div class="produto">
+                        <img alt="Revive" src="img/revive.png" />
+                        <h3>Revive</h3>
+                        <p>₽ 1.500,00</p>
+                        <label for="revive">Quantidade:</label>
+                        <input id="revive" min="0" step="1" type="number" value="0" />
+                    </div>
+					
+                </div>
+            </section>
+            <aside class="pedido">
+                <h2>Seu pedido</h2>
+                <p>Escolha as quantidades dos produtos e clique para calcular.</p>
+                
+                <button onclick="limparPedido()" class="btn-limpar">
+                    <i class="fas fa-trash-alt"></i>
+                    Limpar
+                </button>
+                <br>
+                <button onclick="calcularPedido()" >
+                    <i class="fas fa-calculator"></i>
+                    Calcular pedido
+                </button>
+                
+                <div aria-live="polite" id="resumo"></div>
+            </aside>
+        </div>
+    </main>
+    <footer>Desenvolvido por Diego Campbell | 2026 | Curso Programador FrontEnd SENAI</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
